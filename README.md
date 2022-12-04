@@ -8,15 +8,16 @@ You can add this package to `Package.swift`, include it in your target dependenc
 ```
 let package = Package(
     dependencies: [
-        .package(url: "https://github.com/uhooi/swift-string-transform", .upToNextMajor(from: "0.4.0")),
+        .package(url: "https://github.com/yabuki829/APILoader", .upToNextMajor(from: "0.4.0")),
     ],
     targets: [
         .target(
             name: "<your-target-name>",
-            dependencies: ["StringTransform"]),
+            dependencies: ["APILoader"]),
     ]
 )
 ```
+#### Pod
 ## How to use 
 
 ### GET
