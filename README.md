@@ -8,7 +8,7 @@ You can add this package to `Package.swift`, include it in your target dependenc
 ```
 let package = Package(
     dependencies: [
-        .package(url: "https://github.com/yabuki829/APILoader", .upToNextMajor(from: "0.4.0")),
+        .package(url: "https://github.com/yabuki829/APILoader"),
     ],
     targets: [
         .target(
@@ -17,7 +17,7 @@ let package = Package(
     ]
 )
 ```
-#### Pod
+
 ## How to use 
 
 ### GET
@@ -41,6 +41,22 @@ let headers = [HTTPHeader(name: "content-type", value: "application/json")]
 let parameters:Parameters = []
 
 AL.requestPOST(url,headers: headers,parameters: parameters) { result in
+    switch result {
+    case .success(let data):
+        // Write the process on success.
+    case .failure(let error):
+        // Write the process on failure.
+    }
+            
+}
+```
+### PUT 
+```
+let url = ""
+let headers = [HTTPHeader(name: "content-type", value: "application/json")]
+let parameters:Parameters = []
+
+AL.requestPUT(url,headers: headers,parameters: parameters) { result in
     switch result {
     case .success(let data):
         // Write the process on success.
